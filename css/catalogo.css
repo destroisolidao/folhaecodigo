@@ -1,0 +1,119 @@
+/* ==========================================================
+   css/catalogo.css | Seção do catálogo de anfíbios
+   Usa as cores e fontes definidas em css/style.css.
+   Deve ser carregado DEPOIS de style.css.
+   ========================================================== */
+
+.catalogo {
+  padding: clamp(5rem, 12vw, 9rem) var(--margem);
+  background: linear-gradient(180deg, var(--mata-800), var(--mata-900));
+}
+
+.catalogo__topo { max-width: 1100px; margin: 0 auto 4rem; }
+.catalogo__topo h2 {
+  margin: 0 0 1.25rem;
+  font-family: var(--fonte-titulo);
+  font-weight: 300;
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.catalogo__topo p { max-width: 56ch; margin: 0; opacity: 0.85; }
+
+/* Lista de espécies */
+.especies { max-width: 1100px; margin: 0 auto; padding: 0; list-style: none; }
+
+.especie {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start;
+  padding: 3rem 0;
+  border-top: 1px solid rgba(232, 239, 219, 0.18);
+}
+.especie:last-child { border-bottom: 1px solid rgba(232, 239, 219, 0.18); }
+
+.especie__imagem {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--mata-900);
+}
+.especie__imagem img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.especie__imagem--pendente {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(60% 70% at 30% 30%, rgba(63, 174, 130, 0.22), transparent 70%),
+    radial-gradient(50% 60% at 80% 80%, rgba(74, 106, 53, 0.35), transparent 70%),
+    var(--mata-900);
+  border: 1px dashed rgba(232, 239, 219, 0.25);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.especie__credito {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  margin: 0;
+  padding: 0.4rem 0.7rem;
+  font-size: 0.75rem;
+  background: rgba(6, 15, 10, 0.7);
+}
+
+.especie__nome {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  line-height: 1.1;
+}
+.especie__autoria { margin: 0.3rem 0 1rem; font-size: 0.95rem; opacity: 0.65; }
+.especie__publicacao { margin: 0 0 1.25rem; font-size: 0.95rem; opacity: 0.85; }
+
+/* Selos: mostram a relação da espécie com Bertha Lutz */
+.selo { display: inline-block; margin: 0 0 1rem; padding: 0.3rem 0.9rem; border-radius: 999px; font-size: 0.85rem; }
+.selo--descrita { background: var(--ambar); color: var(--mata-950); }
+.selo--homenagem { border: 1px solid var(--ambar); color: var(--ambar); }
+
+/* Ficha (abre e fecha ao clicar) */
+.ficha summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--ambar);
+  transition: gap 0.3s;
+}
+.ficha summary::-webkit-details-marker { display: none; }
+.ficha summary::after { content: "+"; font-size: 1.2rem; line-height: 1; }
+.ficha[open] summary::after { content: "−"; }
+.ficha summary:hover { gap: 0.9rem; }
+
+.ficha__corpo { margin-top: 1.25rem; animation: abrir 0.5s ease; }
+@keyframes abrir { from { opacity: 0; transform: translateY(-6px); } }
+
+.ficha__dados { margin: 0; }
+.ficha__linha {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid rgba(232, 239, 219, 0.12);
+}
+.ficha__linha dt { font-size: 0.9rem; opacity: 0.65; }
+.ficha__linha dd { margin: 0; }
+.pendente { font-style: italic; opacity: 0.6; }
+
+.ficha__titulo-refs { margin: 1.5rem 0 0.5rem; font-family: var(--fonte-titulo); font-size: 1.2rem; }
+.ficha__refs { margin: 0; padding-left: 1.1rem; font-size: 0.88rem; opacity: 0.9; }
+.ficha__refs li { margin-bottom: 0.6rem; }
+.ref__tipo { display: block; font-size: 0.78rem; opacity: 0.6; }
+.ficha__refs a { color: var(--ambar); text-underline-offset: 3px; }
+
+@media (max-width: 820px) {
+  .especie { grid-template-columns: 1fr; padding: 2.25rem 0; }
+  .ficha__linha { grid-template-columns: 1fr; gap: 0.2rem; }
+}

@@ -1,0 +1,98 @@
+/* ==========================================================
+   css/mulheres.css | Seção "Mulheres na ciência"
+   Usa as cores e fontes de css/style.css. Carregar depois dele.
+   ========================================================== */
+
+.mulheres {
+  padding: clamp(5rem, 12vw, 9rem) var(--margem);
+  background: linear-gradient(180deg, var(--mata-900), var(--mata-950));
+}
+
+.mulheres__topo { max-width: 1100px; margin: 0 auto 4rem; }
+.mulheres__topo h2 {
+  margin: 0 0 1.25rem;
+  font-family: var(--fonte-titulo);
+  font-weight: 300;
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.mulheres__topo p { max-width: 62ch; margin: 0; opacity: 0.85; }
+
+.mulher {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3.5rem 0;
+  border-top: 1px solid rgba(232, 239, 219, 0.18);
+}
+.mulher:last-of-type { border-bottom: 1px solid rgba(232, 239, 219, 0.18); }
+
+/* Coluna do nome e da foto: fica parada enquanto o texto desce */
+.mulher__id { position: sticky; top: 6rem; align-self: start; }
+.mulher__id h3 {
+  margin: 0 0 0.6rem;
+  font-family: var(--fonte-titulo);
+  font-weight: 300;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.mulher__papel { margin: 0; font-size: 0.95rem; opacity: 0.7; }
+
+/* Foto pequena */
+.mulher__foto { width: 100%; max-width: 11rem; margin: 1.25rem 0 0; }
+.mulher__foto img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.mulher__foto figcaption { margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.65; }
+.mulher__foto--pendente {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 3 / 4;
+  border: 1px dashed rgba(232, 239, 219, 0.25);
+  border-radius: 4px;
+  background:
+    radial-gradient(60% 70% at 30% 30%, rgba(63, 174, 130, 0.22), transparent 70%),
+    radial-gradient(50% 60% at 80% 80%, rgba(74, 106, 53, 0.35), transparent 70%),
+    var(--mata-900);
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.mulher__texto p { max-width: 62ch; margin: 0 0 1.2rem; }
+.mulher__texto em { font-family: var(--fonte-titulo); }
+
+.mulher__conexao {
+  padding: 0.2rem 0 0.2rem 1.1rem;
+  border-left: 2px solid var(--ambar);
+}
+
+/* Fontes (abre e fecha ao clicar) */
+.fontes { margin-top: 1.5rem; }
+.fontes summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  list-style: none;
+  color: var(--ambar);
+}
+.fontes summary::-webkit-details-marker { display: none; }
+.fontes summary::after { content: "+"; font-size: 1.2rem; line-height: 1; }
+.fontes[open] summary::after { content: "−"; }
+.fontes ul { margin: 1rem 0 0; padding-left: 1.1rem; font-size: 0.88rem; opacity: 0.9; }
+.fontes li { margin-bottom: 0.6rem; }
+.fontes a { color: var(--ambar); text-underline-offset: 3px; }
+
+@media (max-width: 820px) {
+  .mulher { grid-template-columns: 1fr; padding: 2.5rem 0; }
+  .mulher__id { position: static; }
+  .mulher__foto { max-width: 9rem; }
+}
