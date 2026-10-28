@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Folha &amp; Código | MOCATEC 2026</title>
+  <meta name="description" content="Um passeio digital pela biodiversidade brasileira: anfíbios, mulheres na ciência e algoritmos.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Fraunces:opsz,wght@9..144,300..600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/catalogo.css">
+    <link rel="stylesheet" href="css/mulheres.css">
+  <link rel="stylesheet" href="css/referencias.css">
+
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="pular" href="#explorar">Pular para o conteúdo</a>
+  <div class="veu" aria-hidden="true"></div>
+
+  <header class="cabecalho">
+    <a class="marca" href="#inicio">Folha <span>&amp;</span> Código</a>
+
+    <button class="botao-menu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav aria-label="Principal">
+      <ul class="menu" id="menu">
+        <li><a href="#biodiversidade">Biodiversidade</a></li>
+        <li><a href="#mulheres">Mulheres na ciência</a></li>
+        <li><a href="#algoritmos">Algoritmos</a></li>
+        <li><a href="#referencias">Referências</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero__fundo" aria-hidden="true"></div>
+      <div class="vagalumes" aria-hidden="true"></div>
+
+      <h1 class="titulo">
+        <span class="linha"><span style="--i:0">Na floresta,</span></span>
+        <span class="linha"><span style="--i:1">cada detalhe</span></span>
+        <span class="linha"><span style="--i:2">é um dado.</span></span>
+      </h1>
+
+      <p class="hero__texto">
+        Um passeio digital pela biodiversidade brasileira: os anfíbios que vivem na maquete,
+        as mulheres que fizeram ciência e os algoritmos que ajudam a organizar o que observamos.
+      </p>
+      <div class="hero__acao">
+        <a class="botao" href="#explorar">Entrar na floresta</a>
+      </div>
+
+      <div class="hero__rodape">
+        <span>Projeto da MOCATEC 2026, SESI Taguatinga</span>
+        <span class="rolar" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="explorar" id="explorar">
+      <div class="explorar__conteudo">
+        <div data-revelar>
+          <h2>A maquete mostra onde os anfíbios vivem. O site mostra quem eles são.</h2>
+          <p>
+            Cada habitat da maquete ganha um espelho digital: espécies, características e o caminho
+            que a ciência usa para classificá-las. Aos poucos, esta página vai receber o catálogo,
+            a história de Bertha Lutz e de Ada Lovelace e uma atividade de classificação.
+          </p>
+        </div>
+
+        <ul class="trilha" data-revelar style="--atraso:.15s">
+          <li><a href="#biodiversidade">Catálogo de anfíbios</a></li>
+          <li><a href="#mulheres">Mulheres na ciência</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="catalogo" id="biodiversidade">
+      <div class="catalogo__topo" data-revelar>
+        <h2>Cinco anfíbios, uma cientista.</h2>
+        <p>
+          Quatro destas espécies foram descritas por Bertha Lutz. A quinta recebeu o nome dela em homenagem.
+          Cada ficha mostra só o que tem fonte; o que ainda está sendo conferido aparece como “a verificar”.
+        </p>
+      </div>
+      <ol class="especies" id="lista-anfibios"></ol>
+    </section>
+
+    <section class="mulheres" id="mulheres">
+      <div class="mulheres__topo" data-revelar>
+        <h2>Duas mulheres, duas épocas, uma ideia em comum.</h2>
+        <p>
+          Bertha Lutz, nascida em 1894, classificou anfíbios brasileiros. Ada Lovelace, nascida em 1815,
+          descreveu passo a passo o que uma máquina poderia fazer. As duas nasceram com quase 80 anos de
+          diferença, e a ligação entre elas é uma ideia deste projeto, não um fato histórico: observar,
+          comparar e seguir regras para organizar o que conhecemos.
+        </p>
+      </div>
+
+      <article class="mulher" data-revelar>
+        <div class="mulher__id">
+          <h3>Bertha Lutz</h3>
+          <p class="mulher__papel">Bióloga, herpetóloga e ativista brasileira</p>
+          <!-- FOTO: para colocar a foto, troque o bloco "mulher__foto--pendente" abaixo por:
+          <figure class="mulher__foto">
+            <img src="images/mulheres/bertha-lutz.jpg" alt="Retrato de Bertha Lutz">
+            <figcaption>Crédito: AUTOR, LICENÇA, fonte</figcaption>
+          </figure>
+          -->
+          <figure class="mulher__foto">
+  <img src=images/mulheres/berthalutz.png alt="Retrato de Bertha Lutz">
+  <figcaption>Crédito: Wikipedia</figcaption>
+</figure>
+        </div>
+        <div class="mulher__texto">
+          <p>
+            Bertha Maria Júlia Lutz nasceu em São Paulo, em 1894, filha do cientista Adolpho Lutz. Formou-se em
+            biologia na Sorbonne, em Paris, em 1918, e trabalhou no Museu Nacional, no Rio de Janeiro, como uma
+            das primeiras servidoras públicas federais do país.
+          </p>
+          <p>
+            Como herpetóloga, estudou e classificou os anfíbios anuros: sapos, rãs e pererecas. Descreveu como
+            espécies novas a <em>Aplastodiscus musicus</em>, a <em>Ischnocnema venancioi</em>, a
+            <em>Holoaden bradei</em> e a <em>Pithecopus ayeaye</em>. A <em>Dendropsophus berthalutzae</em>,
+            descrita por Werner Bokermann, leva o nome dela em homenagem. Além do corpo dos animais, Bertha
+            observava o canto, o ciclo de vida e o ambiente de cada espécie, e já alertava, em um levantamento de
+            1954, para a rapidez com que esses ambientes estavam sendo destruídos.
+          </p>
+          <p>
+            Foi também uma das principais lideranças do movimento pelo voto feminino no Brasil: ajudou a fundar
+            a Federação Brasileira para o Progresso Feminino, em 1922, e foi deputada federal entre 1936 e 1937.
+            Por muito tempo, porém, foi lembrada mais pelo ativismo e como assistente do pai do que pela ciência
+            que produziu. Estudos recentes mostram que ela construiu um conhecimento próprio e original sobre os
+            anfíbios do Brasil.
+          </p>
+          <p class="mulher__conexao">
+            No catálogo: quatro espécies foram descritas por Bertha Lutz e uma leva o nome dela. É assim que o
+            trabalho de uma cientista fica registrado nos nomes dos animais.
+          </p>
+          <details class="fontes">
+            <summary>Fontes</summary>
+            <ul>
+              <li>
+                LARA, J. T.; CAPOZZI, R. Os anuros de Bertha Lutz: a diversidade de práticas científicas na
+                herpetologia brasileira entre as décadas de 1940 a 1970. Boletim do Museu Paraense Emílio Goeldi.
+                Ciências Humanas, v. 19, n. 3, e20230104, 2024.
+                <a href="https://boletimch.museu-goeldi.br/wp-content/uploads/2025/02/anuroslara.pdf" target="_blank" rel="noopener noreferrer">Abrir fonte</a>
+              </li>
+              <li>As autorias das espécies seguem o Amphibian Species of the World. Os links estão nas referências do catálogo.</li>
+            </ul>
+          </details>
+        </div>
+      </article>
+
+      <article class="mulher" id="algoritmos" data-revelar>
+        <div class="mulher__id">
+          <h3>Ada Lovelace</h3>
+          <p class="mulher__papel">Matemática inglesa e autora de notas sobre a Máquina Analítica</p>
+          <!-- FOTO: para colocar a foto, troque o bloco "mulher__foto--pendente" abaixo por:
+          <figure class="mulher__foto">
+            <img src="images/mulheres/ada-lovelace.jpg" alt="Retrato de Ada Lovelace">
+            <figcaption>Crédito: AUTOR, LICENÇA, fonte</figcaption>
+          </figure>
+          -->
+         <figure class="mulher__foto">
+  <img src=images/mulheres/adalovelace.png alt="Retrato de Ada Lovelace">
+  <figcaption>Crédito: EnsinarHistoria</figcaption>
+</figure>
+        </div>
+        <div class="mulher__texto">
+          <p>
+            Augusta Ada King, condessa de Lovelace, nasceu em 1815, filha do poeta Lord Byron. Colaborou com o
+            inventor Charles Babbage, que projetou a Máquina Analítica, um computador mecânico programável que
+            nunca chegou a ser construído.
+          </p>
+          <p>
+            Em 1843, ela publicou notas sobre a máquina. Na Nota G, descreveu passo a passo como ela poderia
+            calcular uma sequência de números, os números de Bernoulli. Muita gente considera essa tabela de
+            instruções o primeiro programa de computador publicado, embora haja debate sobre a divisão do
+            trabalho entre ela e Babbage, e a máquina nunca tenha existido para testá-la.
+          </p>
+          <p>
+            Um algoritmo é uma sequência de passos claros que uma pessoa, ou uma máquina, pode seguir sempre do
+            mesmo jeito. A classificação de espécies funciona de forma parecida: observam-se características,
+            como habitat, tamanho, cor e canto, compara-se com o que já se conhece e segue-se um caminho de
+            escolhas até chegar a um nome. É o que fazem as chaves de identificação da biologia. Os artigos de
+            Bertha seguiam essa organização, com tópicos como descrição, medidas, cor, voz, hábitos e
+            distribuição: cada tópico é um atributo que pode ser comparado.
+          </p>
+          <p>
+            Ada percebeu que a máquina poderia trabalhar com mais do que números, desde que as relações entre as
+            coisas pudessem ser expressas por símbolos. Ela também escreveu que a máquina não cria nada por
+            conta própria: faz só o que mandamos. Isso ajuda a entender a diferença entre seguir regras definidas
+            por uma pessoa e um sistema de inteligência artificial, que aprende padrões a partir de dados de
+            treinamento.
+          </p>
+          <p class="mulher__conexao">
+            No projeto: Ada não estudou animais, e a relação com a classificação de espécies é uma leitura nossa.
+            Cada ficha do catálogo organiza características de uma espécie em campos, o que deixa essas
+            informações prontas para serem comparadas, por pessoas ou por programas.
+          </p>
+          <details class="fontes">
+            <summary>Fontes</summary>
+            <ul>
+              <li>
+                Bodleian Libraries. Ada Lovelace and the Analytical Engine, 2018.
+                <a href="https://blogs.bodleian.ox.ac.uk/adalovelace/2018/07/26/ada-lovelace-and-the-analytical-engine/" target="_blank" rel="noopener noreferrer">Abrir fonte</a>
+              </li>
+              <li>
+                MacTutor History of Mathematics, University of St Andrews. Ada Lovelace.
+                <a href="https://mathshistory.st-andrews.ac.uk/SH/lovelace_sh.pdf" target="_blank" rel="noopener noreferrer">Abrir fonte</a>
+              </li>
+              <li>
+                KIM, E. E.; TOOLE, B. A. Ada and the First Computer. Scientific American, 1999.
+                <a href="https://www.academia.edu/9440440/Ada_and_the_First_Computer" target="_blank" rel="noopener noreferrer">Abrir fonte</a>
+              </li>
+              <li>A descrição de Bertha Lutz sobre os tópicos dos artigos vem de Lara e Capozzi (2024), citado na fonte da Bertha.</li>
+            </ul>
+          </details>
+        </div>
+      </article>
+    </section>
+        <section class="referencias" id="referencias">
+      <div class="referencias__topo" data-revelar>
+        <h2>De onde vêm as informações.</h2>
+        <p>
+          Esta página reúne as fontes usadas no catálogo, nos textos sobre as cientistas e nas imagens. Os nomes
+          científicos e as autorias das espécies seguem o Amphibian Species of the World. Quando uma informação
+         não tem fonte verificada, o catálogo mostra “a verificar”.
+        </p>
+      </div>
+      <div class="referencias__lista" id="lista-referencias"></div>
+    </section>
+  </main>
+
+   <script src="data/anfibios.js"></script>
+  <script src="data/referencias.js"></script>
+  <script src="js/catalogo.js"></script>
+  <script src="js/referencias.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
